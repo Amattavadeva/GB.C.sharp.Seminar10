@@ -49,7 +49,12 @@ for (int i = 0; i < result.Length; i++)
 System.Console.WriteLine("Введите число");
 int n = int.Parse(Console.ReadLine());
 
-int[] tempArray = CreateArray(n);
+int[] tempArray = new int[n];
+for (int i = 0; i < tempArray.GetLength(0); i++)
+{
+    tempArray[i] = i + 1;
+}
+
 CreateRows(tempArray);
 
 void CreateRows(int[] arrayCheck)
@@ -65,10 +70,10 @@ void CreateRows(int[] arrayCheck)
     {
         Array.Clear(arrayTemp); // сбрасываем значение переменных в массиве
         count = 0; // счётчик в 0
-        if (arrayCheck[i] != 0)
+        if (arrayCheck[i] != 0) // если элемент массива не нулевой
         {
-            arrayTemp[count] = arrayCheck[i];
-            tempNumber2 = arrayCheck[i];
+            arrayTemp[count] = arrayCheck[i]; // записываем его в каунт
+            tempNumber2 = arrayCheck[i]; // и
 
             for (int j = i; j < arrayCheck.Length; j++)
             {
@@ -93,15 +98,6 @@ void CreateRows(int[] arrayCheck)
     }
 }
 
-int[] CreateArray(int n)
-{
-    int[] temp = new int[n];
-    for (int i = 0; i < temp.GetLength(0); i++)
-    {
-        temp[i] = i + 1;
-    }
-    return temp;
-}
 
 string PrintIntArray(int[] array)
 {
