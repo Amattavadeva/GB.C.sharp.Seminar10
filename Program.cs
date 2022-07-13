@@ -10,7 +10,6 @@
 // выходные данные:
 // 1, 7, 0, 1
 
-
 int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
 int[] info = { 2, 3, 3, 1 };
 int[] result = new int[info.Length];
@@ -25,8 +24,8 @@ for (int i = 0; i < info.Length; i++) //разбываем data на числа 
     k += info[i];
     Console.Write("; ");
 }
-
 k = 0;
+
 for (int i = 0; i < info.Length; i++) // преобразуем получившиеся числа из 2-ой в 10-ую
 {
     for (int j = 0; j < info[i]; j++)
@@ -36,6 +35,7 @@ for (int i = 0; i < info.Length; i++) // преобразуем получивш
     k += info[i];
 }
 Console.WriteLine();
+
 for (int i = 0; i < result.Length; i++)
 {
     Console.Write(result[i] + " ");
