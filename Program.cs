@@ -10,33 +10,33 @@
 // выходные данные:
 // 1, 7, 0, 1
 
-/* int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
+int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
 int[] info = { 2, 3, 3, 1 };
-int[] result = new int[info.Length];
+int[] result = new int[info.Length]; // новый массив для сбора десятичныого представления числа
 int k = 0; // счетчик количества цифр в data
 
-for (int i = 0; i < info.Length; i++) //разбываем data на числа в двоичном коде на основе количества бит из info
+for (int i = 0; i < info.Length; i++) // разбиваем data на числа в двоичном коде на основе количества бит из info
 {
-    for (int j = 0; j < info[i]; j++)
+    for (int j = 0; j < info[i]; j++) // и проходим циклом столько шагов, какая цифра стоит в инфо (2 шага, 3 шага, 3 шага)
     {
-        Console.Write(data[k + j] + " ");
+        Console.Write(data[k + j] + " "); //выводя в консоль всё, что встретили из массива data
     }
-    k += info[i];
-    Console.Write("; ");
+    k += info[i]; // когда дошли все шаги, делаем переход по инфо
+    Console.Write("; "); // и отделяем получившийся ряд точкой с запятой
 }
-k = 0;
+k = 0; // обнуляем счётчик, он нам понадобиться ещё раз при конвертации
 
-for (int i = 0; i < info.Length; i++) // преобразуем получившиеся числа из 2-ой в 10-ую
+for (int i = 0; i < info.Length; i++) // преобразуем получившиеся числа из 2-ой в 10-ую. пока в размере массива инфо
 {
-    for (int j = 0; j < info[i]; j++)
+    for (int j = 0; j < info[i]; j++) // и пока шагов (чисел) меньше, чем в инстуркции
     {
-        result[i] += data[k + j] * (int)Math.Pow(2, info[i] - 1 - j);
+        result[i] += data[k + j] * (int)Math.Pow(2, info[i] - 1 - j); // записываем в новый массив с 0 позиции суммы степени двойки всех разрядов
     }
     k += info[i];
 }
-Console.WriteLine();
+Console.WriteLine(); // печать
 
 for (int i = 0; i < result.Length; i++)
 {
     Console.Write(result[i] + " ");
-} */
+}
