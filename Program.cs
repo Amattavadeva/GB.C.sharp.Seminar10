@@ -34,3 +34,9 @@ for (int i = 0; i < info.Length; i++) // преобразуем получивш
     }
     k += info[i];
 }
+Console.WriteLine();
+
+for (int i = 0; i < result.Length; i++)
+{
+    Console.Write(result[i] + " ");
+}
