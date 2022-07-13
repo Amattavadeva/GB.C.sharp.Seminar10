@@ -46,7 +46,8 @@ for (int i = 0; i < result.Length; i++)
 числа в группе друг на друга не делятся)? Найдите M при заданном N и получите
 одно из разбиений на группы N ≤ 10²⁰. */
 
-int n = InputNumbers("Введите число N: ");
+System.Console.WriteLine("Введите число");
+int n = int.Parse(Console.ReadLine());
 
 int[] tempArray = CreateArray(n);
 CreateRows(tempArray);
@@ -62,8 +63,8 @@ void CreateRows(int[] arrayCheck)
 
     for (int i = 0; i < arrayCheck.Length; i++)
     {
-        Array.Clear(arrayTemp);
-        count = 0;
+        Array.Clear(arrayTemp); // сбрасываем значение переменных в массиве
+        count = 0; // счётчик в 0
         if (arrayCheck[i] != 0)
         {
             arrayTemp[count] = arrayCheck[i];
@@ -90,13 +91,6 @@ void CreateRows(int[] arrayCheck)
             Console.WriteLine($"Группа {m++}: {PrintIntArray(arrayTemp)}");
         }
     }
-}
-
-int InputNumbers(string input)
-{
-    Console.Write(input);
-    int output = Convert.ToInt32(Console.ReadLine());
-    return output;
 }
 
 int[] CreateArray(int n)
