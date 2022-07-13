@@ -10,7 +10,7 @@
 // выходные данные:
 // 1, 7, 0, 1
 
-int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
+/* int[] data = { 0, 1, 1, 1, 1, 0, 0, 0, 1 };
 int[] info = { 2, 3, 3, 1 };
 int[] result = new int[info.Length];
 int k = 0; // счетчик количества цифр в data
@@ -39,4 +39,4 @@ Console.WriteLine();
 for (int i = 0; i < result.Length; i++)
 {
     Console.Write(result[i] + " ");
-}
+} */
