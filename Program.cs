@@ -72,12 +72,12 @@ void CreateRows(int[] arrayCheck)
         count = 0; // счётчик в 0
         if (arrayCheck[i] != 0) // если элемент массива не нулевой
         {
-            arrayTemp[count] = arrayCheck[i]; // записываем его в каунт
-            tempNumber2 = arrayCheck[i]; // и
+            arrayTemp[count] = arrayCheck[i]; // записываем его 
+            tempNumber2 = arrayCheck[i]; 
 
-            for (int j = i; j < arrayCheck.Length; j++)
+            for (int j = i; j < arrayCheck.Length; j++) // идём по массиву
             {
-                if (arrayCheck[j] % tempNumber2 != 0 || arrayCheck[j] / tempNumber2 == 1)
+                if (arrayCheck[j] % tempNumber2 != 0 || arrayCheck[j] / tempNumber2 == 1) // проверяем на "простоту" число
                 {
                     tempSwitch = 0;
                     tempNumber = arrayCheck[j];
